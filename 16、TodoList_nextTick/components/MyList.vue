@@ -1,21 +1,18 @@
 <template>
 	<ul class="todo-main">
 		<MyItem 
-			v-for="todoObj in todos"
-			:key="todoObj.id" 
+			v-for=" todoObj in todos" :key="todoObj.id" 
 			:todo="todoObj" 
-		/>
+		></MyItem>
 	</ul>
 </template>
 
 <script>
-	import MyItem from './MyItem'
-
+	import MyItem from './MyItem.vue'
 	export default {
 		name:'MyList',
 		components:{MyItem},
-		//声明接收App传递过来的数据
-		props:['todos']
+		props:["todos"]
 	}
 </script>
 

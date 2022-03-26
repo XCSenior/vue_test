@@ -1,15 +1,20 @@
-//引入Vue
+// 引入Vue
 import Vue from 'vue'
-//引入App
+// 引入App
 import App from './App.vue'
-//关闭Vue的生产提示
+
+// 关闭Vue的生产提示
 Vue.config.productionTip = false
 
-//创建vm
+// const Demo = Vue.extend({})
+// Vue.prototype.x = new Demo()	//vc
+
+// 创建Vue实例对象vm
 new Vue({
-	el:'#app',
-	render: h => h(App),
-	beforeCreate() {
-		Vue.prototype.$bus = this //安装全局事件总线
-	},
+	el:"#app",
+	render : h => h(App),
+	beforeCreate(){
+		// Vue.prototype.x =   this 	//全局事件总线的安装
+		Vue.prototype.$bus = this
+	}
 })

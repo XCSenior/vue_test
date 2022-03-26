@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>sessionStroage</title>
+</head>
+<body>
+	<h1>sessionStroage</h1>
+	<button onclick="saveData()">点我向sessionStorage保存数据</button>
+	<button onclick="readData()">点我读取数据</button>
+	<button onclick="deleteData()">点我删除数据</button>
+	<button onclick="clearAllData()">点我清空数据</button>
+
+<script>
+	let p = {name:"张三",age:18}
+
+	function saveData(){
+		window.sessionStorage.setItem("msg","hello!!!")		//该方法是设置一个键值对
+		window.sessionStorage.setItem("msg2",666)		//浏览器自动将数值型变成字符串型
+		sessionStorage.setItem("person",JSON.stringify(p))			//window全局对象可省略
+	}
+
+	function readData() {
+		console.log(sessionStorage.getItem("msg"));
+		console.log(sessionStorage.getItem("msg2"));
+		const result = sessionStorage.getItem("person");
+		console.log(JSON.parse(result));
+	}
+
+	function deleteData () {
+		sessionStorage.removeItem("msg2")
+	}
+
+	function clearAllData() {
+		sessionStorage.clear()
+	}
+
+
+</script>
+</body>
+</html>
