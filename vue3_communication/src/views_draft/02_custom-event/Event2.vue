@@ -2,19 +2,21 @@
   <div class="child">
     <p>我是子组件2</p>
     <button @click="handler">点击我触发自定义事件xxx</button>
-    <button @click="$emit('click','AK47','J20')">点击我触发自定义事件click</button>
+    <button @click="myEmit('click', 'AK47')">点击我触发自定义事件click</button>
   </div>
 </template>
 
 <script setup lang="ts">
-//利用defineEmits方法返回函数触发自定义事件
-//defineEmits方法不需要引入直接使用
-let $emit = defineEmits(['xxx','click']);
-//按钮点击回调
+// 利用宏defineEmits方法返回的箭头函数，去触发自定义事件
+// 不需要引入，在script setup中直接使用
+const myEmit = defineEmits(['xxx', 'click']);
+
 const handler = () => {
-  //第一个参数:事件类型 第二个|三个|N参数即为注入数据
-    $emit('xxx','东风导弹','航母');
-};
+    // 第一个参数为事件类型名称。第二个及后面，为注入的参数
+    myEmit('xxx', 1, 2);
+}
+
+
 </script>
 
 <style scoped>
