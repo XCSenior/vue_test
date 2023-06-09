@@ -1,3 +1,5 @@
+# 初步梳理一下Vue3的组件间通信方式
+
 ## 完整引入element-plus
 - https://element-plus.gitee.io/zh-CN/guide/quickstart.html
 
