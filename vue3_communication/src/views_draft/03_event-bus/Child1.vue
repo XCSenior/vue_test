@@ -11,14 +11,14 @@ import { onBeforeUnmount, onMounted } from 'vue';
 // 组件挂在完毕的时候绑定事件，接收来自兄弟组件的数据
 onMounted(() => {
     // 第一个参数即为事件类型，第二个参数即为事件回调
-    $bus.on('car', (car) => {
-        console.log('car :>> ', car);
+    $bus.on('car', (car: unknown) => {
+        alert(car)
     });
 });
 
 onBeforeUnmount(() => {
     /* 需要解绑事件 */
-}),
+});
 </script>
 
 <style scoped>
