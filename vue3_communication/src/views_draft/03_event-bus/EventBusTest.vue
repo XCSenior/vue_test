@@ -1,10 +1,10 @@
 <template>
   <div class="box">
     <h1>全局事件总线$bus</h1>
-    <hr />
+    <hr/>
     <div class="container">
-      <Child1></Child1>
-      <Child2></Child2>
+        <Child1></Child1>
+        <Child2></Child2>
     </div>
   </div>
 </template>
