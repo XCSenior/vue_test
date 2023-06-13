@@ -5,7 +5,7 @@
     <hr />
     <!-- props:父亲给儿子数据 -->
     <!-- <Child :modelValue="money" @update:modelValue="handler"></Child> -->
-    <!-- 
+    <!--
        v-model组件身上使用
        第一:相当有给子组件传递props[modelValue] = 10000
        第二:相当于给子组件绑定自定义事件update:modelValue
@@ -29,7 +29,7 @@ let info = ref("");
 //父组件的数据钱数
 let money = ref(10000);
 //自定义事件的回调
-const handler = (num) => {
+const handler = (num: number) => {
   //将来接受子组件传递过来的数据
   money.value = num;
 };
