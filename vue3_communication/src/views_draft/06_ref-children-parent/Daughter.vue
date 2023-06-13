@@ -1,18 +1,20 @@
 <template>
   <div class="dau">
-     <h1>我是闺女曹杰{{money}}</h1>
-     <button @click="handler($parent)">点击我爸爸给我10000元</button>
+     <h1>我是闺女曹杰钱数{{ money }}</h1>
+     <button @click="get10000YuanFromDad($parent)">点击我爸爸，给我10000元</button>
   </div>
 </template>
 
 <script setup lang="ts">
-import {ref} from 'vue';
-//闺女钱数
-let money = ref(999999);
-//闺女按钮点击回调
-const handler = ($parent)=>{
-   money.value+=10000;
-   $parent.money-=10000;
+import { ref } from 'vue';
+
+const money = ref(999999);
+const get10000YuanFromDad = ($parent) => {
+    money.value += 10000;
+    $parent.money -= 10000;
+
+
+    console.log('$parent :>> ', $parent);
 }
 </script>
 
