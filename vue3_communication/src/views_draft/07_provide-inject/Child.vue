@@ -1,12 +1,12 @@
 <template>
   <div class="child">
      <h1>我是子组件1</h1>
-     <Child></Child>
+     <GrandChild></GrandChild>
   </div>
 </template>
 
 <script setup lang="ts">
-import Child from './GrandChild.vue';
+import GrandChild from './GrandChild.vue';
 </script>
 
 <style scoped>
