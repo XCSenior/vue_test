@@ -6,13 +6,14 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref, type ComponentPublicInstance } from 'vue';
 
 const money = ref(999999);
-const get10000YuanFromDad = ($parent) => {
+const get10000YuanFromDad = ($parent: ComponentPublicInstance | null) => {
     money.value += 10000;
-    $parent.money -= 10000;
-
+    if ($parent && $parent.hasOwnProperty('money')) {
+        $parent!.money -= 10000;
+    }
 
     console.log('$parent :>> ', $parent);
 }
