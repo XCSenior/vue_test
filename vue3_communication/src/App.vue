@@ -14,7 +14,8 @@
       <router-link to="/attrs-listeners_pre">useAttrs</router-link>&nbsp;&nbsp;
       <router-link to="/ref-parent_pre">ref$parent</router-link>&nbsp;&nbsp;
       <router-link to="/provide-inject_pre">provide-inject</router-link>&nbsp;&nbsp;
-      <router-link to="/vuex_pre">pinia</router-link>&nbsp;&nbsp;
+      <router-link to="/pinia_options_API_pre">pinia_options_API</router-link>&nbsp;&nbsp;
+      <router-link to="/pinia_composition_API_pre">pinia_composition_API</router-link>&nbsp;&nbsp;
       <router-link to="/slot_pre">slot</router-link>&nbsp;&nbsp;
     </div>
     <br>
@@ -28,7 +29,7 @@
   }
 </script>
 <script lang="ts" setup>
-  
+
 </script>
 <style lang="less" scoped>
   .com {

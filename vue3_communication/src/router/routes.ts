@@ -37,8 +37,12 @@ export default [
     component: () => import(`@/views_draft/07_provide-inject/ProvideInjectTest.vue`),
   },
   {
-    path: '/vuex_pre',
-    component: () => import(`@/views_draft/08_pinia/index.vue`),
+    path: '/pinia_options_API_pre',
+    component: () => import(`@/views_draft/08_pinia_options_API/index.vue`),
+  },
+  {
+    path: '/pinia_composition_API_pre',
+    component: () => import(`@/views_draft/08_pinia_composition_API/index.vue`),
   },
    {
     path: '/slot_pre',
